@@ -1,2 +1,3 @@
 hat @ git+https://github.com/ria-com/HAT.git
 modelhub_client @ git+https://github.com/ria-com/modelhub-client.git
+basicsr @ git+https://github.com/XPixelGroup/BasicSR.git
