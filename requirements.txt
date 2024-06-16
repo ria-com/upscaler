@@ -1,0 +1,2 @@
+hat @ git+https://github.com/ria-com/HAT.git
+modelhub_client @ git+https://github.com/ria-com/modelhub-client.git
