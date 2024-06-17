@@ -1,5 +1,7 @@
 # RIA Upscaler 
 
+
+
 ## Installation
 ```bash
 pip3 install git+https://github.com/ria-com/upscaler.git
