@@ -34,7 +34,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ria-com/upscaler.git",
     packages=setuptools.find_packages(),
-    package_data={'': ['upscaler/plugins/enhancer_hat/options/HAT_GAN_Real_SRx4.yml']},
+    package_data={
+        '': ['*.yaml'],
+    },
     install_requires=packages,
     include_package_data=True,
     classifiers=[
