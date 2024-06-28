@@ -2,10 +2,6 @@ import os
 import torch
 import numpy as np
 
-import hat.archs
-import hat.data
-import hat.models  # do NOT comment, it is required
-
 from basicsr.utils import set_random_seed
 from basicsr.utils.dist_util import get_dist_info
 from basicsr.utils.options import yaml_load
@@ -14,18 +10,13 @@ from basicsr.utils import img2tensor, tensor2img
 
 from upscaler.tools.mcm import modelhub
 
-yaml_names = {
-    "HAT_GAN_Real_SRx4": "HAT_GAN_Real_SRx4.yml"
-}
 
-modelhub_model_names = {
-    "HAT_GAN_Real_SRx4": "Real_HAT_GAN_SRx4"
-}
-
-class HAT(object):
-    def __init__(self, model_name="HAT_GAN_Real_SRx4", tile_size=None, **kwargs):
-        opt_folder = os.path.dirname(os.path.abspath(__file__))
-        opt = yaml_load(os.path.join(opt_folder, "options", yaml_names[model_name]))
+class BASICSR(object):
+    def __init__(self, yaml_names, modelhub_model_names, opt_folder, model_name, tile_size=None, **kwargs):
+        self.model_name = model_name
+        print("opt_folder:", opt_folder)
+        print("yaml_names:", yaml_names)
+        opt = yaml_load(os.path.join(opt_folder, yaml_names[model_name]))
         
         if tile_size is not None:
             opt['tile']['tile_size'] = tile_size
@@ -63,3 +54,6 @@ class HAT(object):
         sr_img = tensor2img([result])
         torch.cuda.empty_cache()
         return sr_img
+
+    def get_model_name(self):
+        return self.model_name
