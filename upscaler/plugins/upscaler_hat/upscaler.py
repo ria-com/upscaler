@@ -16,11 +16,19 @@ from upscaler.tools.mcm import modelhub
 from upscaler.plugins.upscaler_basicsr import BASICSR
 
 yaml_names = {
-    "HAT_GAN_Real_SRx4": "HAT_GAN_Real_SRx4.yml"
+    "HAT_GAN_Real_SRx4": "HAT_GAN_Real_SRx4.yml",
+    "HAT_GAN_Real_sharper": "HAT_GAN_Real_sharper.yml",
+    "HAT-L_SRx2_ImageNet-pretrain": "HAT-L_SRx2_ImageNet-pretrain.yml",
+    "HAT-L_SRx3_ImageNet-pretrain": "HAT-L_SRx3_ImageNet-pretrain.yml",
+    "HAT-L_SRx4_ImageNet-pretrain": "HAT-L_SRx4_ImageNet-pretrain.yml"
 }
 
 modelhub_model_names = {
-    "HAT_GAN_Real_SRx4": "Real_HAT_GAN_SRx4"
+    "HAT_GAN_Real_SRx4": "Real_HAT_GAN_SRx4",
+    "HAT_GAN_Real_sharper": "Real_HAT_GAN_sharper",
+    "HAT-L_SRx2_ImageNet-pretrain": "HAT-L_SRx2_ImageNet-pretrain",
+    "HAT-L_SRx3_ImageNet-pretrain": "HAT-L_SRx3_ImageNet-pretrain",
+    "HAT-L_SRx4_ImageNet-pretrain": "HAT-L_SRx4_ImageNet-pretrain"
 }
 
 opt_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "options")

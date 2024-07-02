@@ -1,10 +1,10 @@
 import cv2
 import os
-# from upscaler import HAT as Upscaler
-from upscaler import DRCT as Upscaler
+from upscaler import HAT as Upscaler
+# from upscaler import DRCT as Upscaler
 
 if __name__ == '__main__':
-    up = Upscaler(tile_size=320)
+    up = Upscaler(model_name="HAT_GAN_Real_SRx4", tile_size=320)
 
     suffix = up.get_model_name()
     current_dir = os.path.dirname(os.path.abspath(__file__))
